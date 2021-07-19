@@ -4,28 +4,48 @@ import { triviasService } from "../Services/TriviasService.js";
 
 //Private
 function _draw() {
-  // let values = ProxyState.values;
-  // let template = ''
-  // values.forEach(v => template += v.Template)
-  // document.getElementById("app").innerHTML = /*html*/`
-  // <button className="btn btn-info" onclick="app.valuesController.addValue()">Add Value</button>  
-  // <div className="card-columns values">
-  //     ${template}
-  // </div>
-  // `
+  let trivia = ProxyState.trivia;
+  let template = ''
+  trivia.forEach(t => template += t.Template)
+  document.getElementById('game').innerHTML = template
+  // document.getElementById('buttons').innerHTML = `
+  // <button type="button" class="btn btn-primary" ${}
+
+
 }
 
-//Public
-export default class ValuesController {
+// //Public
+// export default class ValuesController {
+//   constructor() {
+//     ProxyState.on("values", _draw);
+//     _draw()
+//   }
+// }
+
+export default class TriviasController {
+
   constructor() {
-    ProxyState.on("values", _draw);
-    _draw()
+    ProxyState.on('trivia', _draw);
+    this.getAll()
+
+
   }
+
+  async getAll() {
+    try {
+      await triviasService.getAllTrivia()
+    } catch (e) {
+      console.error("Didn't get quite get it right" + e)
+
+    }
+  }
+}
+
 
   // addValue() {
   //   valuesService.addValue()
   // }
 
-}
+
 
 
