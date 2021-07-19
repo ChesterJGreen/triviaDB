@@ -8,8 +8,8 @@ function _draw() {
   let template = ''
   trivia.forEach(t => template += t.Template)
   document.getElementById('game').innerHTML = template
-  // document.getElementById('buttons').innerHTML = `
-  // <button type="button" class="btn btn-primary" ${}
+  document.getElementById('buttons').innerHTML = `
+  <button type="button" class="btn btn-primary" ${this.correct}`
 
 
 }
