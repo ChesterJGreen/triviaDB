@@ -22,7 +22,7 @@ export default class Trivia {
   <div class="col-4 m-2 border border-dark bg-secondary shadow rounded">
   <div row>
   <div class="col">
-    <h5>${this.question}</h5>
+    <h5 class="text-black-50">${this.question}</h5>
     <button class="btn btn-success border-dark m-2">${this.answers[3]}</button>
     <button class="btn btn-success border-dark m-2">${this.answers[1]}</button>
     <button class="btn btn-success border-dark m-2">${this.answers[2]}</button>
