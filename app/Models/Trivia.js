@@ -23,12 +23,24 @@ export default class Trivia {
   <div row>
   <div class="col py-3">
     <h5 class="text-black-50">${this.question}</h5>
-    <button class="btn btn-success border-dark m-2">${this.answers[3]}</button>
-    <button class="btn btn-success border-dark m-2">${this.answers[1]}</button>
-    <button class="btn btn-success border-dark m-2">${this.answers[2]}</button>
-    <button class="btn btn-success border-dark m-2">${this.answers[0]}</button>
+    <div id="buttons">
+
+    </div>
     </div>
     </div>
   </div>`
   }
+
+  get MyButtons(x) {
+    template = ''
+    return `<button class="btn btn-success border-dark m-2">${this.answers[x]}</button>`
+  }
 }
+
+
+
+
+// {/* <button class="btn btn-success border-dark m-2">${this.answers[3]}</button>
+// <button class="btn btn-success border-dark m-2">${this.answers[1]}</button>
+// <button class="btn btn-success border-dark m-2">${this.answers[2]}</button>
+// <button class="btn btn-success border-dark m-2">${this.answers[0]}</button> */}
