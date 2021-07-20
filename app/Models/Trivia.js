@@ -21,10 +21,10 @@ export default class Trivia {
     return `
   <div class="col-3 m-2 border shadow">
     <h5>${this.question}</h5>
-    <button class="btn btn-primary">${this.answer[3]}</button>
-    <button class="btn btn-primary">${this.answer[1]}</button>
-    <button class="btn btn-primary">${this.answer[2]}</button>
-    <button class="btn btn-primary">${this.answer[0]}</button>
+    <button class="btn btn-primary">${this.answers[3]}</button>
+    <button class="btn btn-primary">${this.answers[1]}</button>
+    <button class="btn btn-primary">${this.answers[2]}</button>
+    <button class="btn btn-primary">${this.answers[0]}</button>
     
   </div>`
   }

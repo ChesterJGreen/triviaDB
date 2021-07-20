@@ -9,7 +9,7 @@ class TriviasService {
     console.log(res.data.results)
 
     let trivia = res.data.results.map(t => new Trivia(t))
-    trivia = ProxyState.trivia
+    ProxyState.trivia = trivia
 
   }
 
