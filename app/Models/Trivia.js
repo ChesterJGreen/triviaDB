@@ -21,7 +21,7 @@ export default class Trivia {
     return `
   <div class="col-4 m-2 border border-dark bg-secondary shadow rounded">
   <div row>
-  <div class="col">
+  <div class="col py-3">
     <h5 class="text-black-50">${this.question}</h5>
     <button class="btn btn-success border-dark m-2">${this.answers[3]}</button>
     <button class="btn btn-success border-dark m-2">${this.answers[1]}</button>
